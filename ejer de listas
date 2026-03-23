@@ -1,0 +1,15 @@
+alimentos = ["mate", "cafe", "harina", "palmitos","yerba", "mermelada", "cacao", "picadillo"]
+print(alimentos)
+
+#Sabiendo que los indices comienzan en cer, debemos seleccionar palmitos de la lista alimentos:
+palmitos=alimentos[3]
+print(palmitos)
+
+#Ahora debemos agregar elementos a la lista, hay dos formas: copiar la lista y agregarlos o la segunda es usando la funcion append
+alimentos.append("azucar")
+alimentos.append("agua")
+print(alimentos)
+ 
+ #imprimamos los ultimos tres:
+ultimos_tres = alimentos[-3:] 
+print(ultimos_tres)
