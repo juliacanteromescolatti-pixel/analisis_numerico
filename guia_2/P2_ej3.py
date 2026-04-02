@@ -3,10 +3,10 @@
 def rnewton (fun,x0,err,mit):
     hx = []  # historial de x
     hf = []  # historial de f(x)
-# Paso inicial
+#Paso inicial
     fx, dfx = fun(x0)  #dfx: derivada de f(x)
     v = fx
-#ahora a cada lista le agrego x0 en el caso de hx y v a hy
+#Ahora a cada lista le agrego x0 en el caso de hx y v a hy
     hx.append(x0)
     hf.append(v)
 #Ahora aplicamos las condiciones:
