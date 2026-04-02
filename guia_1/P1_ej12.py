@@ -1,9 +1,7 @@
-"""Tengo que definir esta funcion con "x" e "y" dos vectores 
-y que devuelva True si son ortogonales"""
+#Tengo que definir esta funcion con "x" e "y" dos vectores y que devuelva True si son ortogonales
 def sonortogonales(x,y):
     producto_punto= x[0]*y[0] + x[1]*y[1]  
-    """estoy tomando el elemneto cero de lalista y 
-    el elemneto uno de la lista, para hcer el producto vectorial de x1 con y1 y x2 con y2"""
+#estoy tomando el elemneto cero de lalista y el elemneto uno de la lista, para hcer el producto vectorial de x1 con y1 y x2 con y2
 #Veamso que pd es cero
     if producto_punto ==0:
         return True

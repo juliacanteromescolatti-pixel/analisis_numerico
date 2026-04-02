@@ -18,7 +18,8 @@ def horn_mal(coef, p):
 
 print(horn(coef,p))
 print(horn_mal(coef,p))
-#lo que  hacemos en este ejercicio es , dados los coeficientes de nuestro polinomios, tomameos como res 
-#Al resultado de haver p por el coef cero( que es el de mas valor)mas el sigient (todo esto gracias a enterder Hornes)
-#lUego notmaos que podemos ahorarnos dps operaciones por eso es i+2, pues la primera esta fija y por Horner nos ahorramos la otra
-#Luego comprobamos que el resultado que nos da el es correcto haciendo en la caluladora
+"""Lo que  hacemos en este ejercicio es , dados los coeficientes de nuestro polinomios,
+tomameos como res al resultado de hacer p por el coef cero( que es el de mas valor)mas el sigiente
+ (todo esto gracias a enterder Hornes) luego notamos que podemos ahorarnos dos operaciones
+ por eso es i+2, pues la primera esta fija y por Horner nos ahorramos la otra.
+ Luego comprobamos que el resultado que nos da el es correcto haciendo en la caluladora"""

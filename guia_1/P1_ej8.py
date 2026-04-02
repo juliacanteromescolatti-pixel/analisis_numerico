@@ -1,9 +1,6 @@
-"""
-escribir dos funciones para la resulucion de ecuaciones de segundo grado
-del tipo ax**2+bx+c
-una sera mala (usando la forma tradicional)
-y la otra buena (creada de manera eficiente para evitar la perdida de digitos)
-"""
+"""escribir dos funciones para la resulucion de ecuaciones de segundo grado
+del tipo ax**2+bx+c una sera mala (usando la forma tradicional)
+y la otra buena (creada de manera eficiente para evitar la perdida de digitos)"""
 def mala():
     a=float(input("introduzca un numero para ser el termino acompañando a x cuadrado: "))
     b=float(input("introduzca un numero para ser el termino acompañando de x: "))
