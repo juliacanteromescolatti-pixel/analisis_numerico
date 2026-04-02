@@ -24,7 +24,7 @@ def rnewton (fun,x0,err,mit):
         hx.append(x1)
         hf.append(w)
 
-#cCONDICIONES PARA PARAR LAS ITERACIONES:
+#CONDICIONES PARA PARAR LAS ITERACIONES:
         if abs(w) < err or abs(x1 - x0) < err:     #Son condiciones de parada (cuándo dejar de iterar)
             return (hx, hf)
 #abs(w) < err: significa que encontre donde la funcion f(x) es aprox cero, es decir la raiz.
