@@ -35,3 +35,6 @@ def buena():
          x2 = (-b-dis**0.5)/(2*a)
          x1 = c/(a*x2)
     return x1, x2
+
+mala()
+buena()
