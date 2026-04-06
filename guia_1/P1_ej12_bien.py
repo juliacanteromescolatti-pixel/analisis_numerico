@@ -3,7 +3,7 @@ def sonortogonales(vector_1, vector_2):
 
     producto_interno = 0
     for i in range(n):
-        producto_interno=producto_interno+vector_1[i]*vector_2[i]
+        producto_interno=producto_interno+vector_1[i]*vector_2[i] #el i es para acceder a distintos elemnetos de la lista
     
     if producto_interno==0:
         return True
