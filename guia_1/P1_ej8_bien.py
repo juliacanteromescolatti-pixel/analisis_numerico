@@ -19,10 +19,10 @@ def buena(a,b,c):
         return None
 
 #Encontrar la raiz mas lejana al cero en valor absoluto
-if b>0:
-    x_1=(-b-sqrt(disc))/(2.0*a)
-else:
-    x_1=(-b+sqrt(disc))/(2.0*a)
-x_2=(c/a)/x_1
-    
-return[x_1,x_2]
+    if b>0:
+        x_1=(-b-sqrt(disc))/(2.0*a)
+    else:
+        x_1=(-b+sqrt(disc))/(2.0*a)
+    x_2=(c/a)/x_1
+
+    return[x_1,x_2]
