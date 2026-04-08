@@ -1,9 +1,7 @@
 def fun_lab2ej6(x):
     y = x**(x-1)
     return y
-err = 1e-5
-mit = 100
-x0 = 1
+
 def ripf(fun_lab2ej6, x0, err, mit):
     hx=[] # define mi dominio
     f= fun_lab2ej6(x0)
