@@ -20,7 +20,7 @@ def rbisec(fun, I, err, mit):
         w = fun(c)
         hx.append(c)
         hf.append(w)
-        if abs(w)<err or k>=mit:
+        if abs(w)<err or k>=mit: #no seria con las raices?
             return(hx, hf)
         if w*u<0:
             v=fun(c)
