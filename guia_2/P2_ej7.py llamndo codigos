@@ -1,0 +1,47 @@
+import numpy as np #PARA EL EXPORENCIAL DE MI FUNCION BASE
+
+#FUNCION BASE
+def F(y, x):
+    return y - np.exp(-(1 - x*y)**2)
+
+#DERIVADA PARA EL METODO DE NEWTON
+def dF(y, x):
+    return 1 + 2*x*(1 - x*y)*np.exp(-(1 - x*y)**2)
+
+#INPUT
+x = float(input("Ingrese valor de x: "))
+y0 = float(input("Ingrese valor inicial y0: "))
+
+# IMPORTS DE METODOS
+from P2_ej1 import rbisec
+from P2_ej3 import rnewton
+from P2_ej5 import ripf
+
+# CALCULO
+raiz_bis = rbisec(lambda y: F(y, x), [0, 1], 1e-6, 100) #Toma la función F(y). Busca una raíz en el intervalo [0,1]. Va achicando el intervalo. Devuelve un valor de y
+raiz_newton = rnewton(lambda y: F(y, x),lambda y: dF(y, x),y0,1e-6)#Usa la función y su derivada. Parte de un valor inicial YO.Va iterando hasta encontrar la raíz. Devuelve un valor de y
+raiz_pf = ripf(lambda y: np.exp(-(1 - x*y)**2),y0,1e-6,100) #Usa la froma de la funcion, itera con g(y) y devuelve el valor de y
+
+# RESULTADOS
+print("Resultados:")
+print("Bisección:", raiz_bis)
+print("Newton:", raiz_newton)
+print("Punto fijo:", raiz_pf)
+
+"""#PARA GRAFICAR
+import numpy as np
+import matplotlib.pyplot as plt
+
+xs = np.linspace(0, 2, 100)
+
+yb = [u_bis(x) for x in xs]
+yn = [u_newton(x) for x in xs]
+yp = [u_pf(x) for x in xs]
+
+plt.plot(xs, yb, label="Bisección")
+plt.plot(xs, yn, label="Newton")
+plt.plot(xs, yp, label="Punto fijo")
+
+plt.legend()
+plt.grid()
+plt.show()"""
