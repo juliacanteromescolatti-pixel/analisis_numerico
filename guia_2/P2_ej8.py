@@ -19,9 +19,9 @@ def dg(x):
 
 
 #METODO DE NEWTON
-#    f  -> función (acá g)
-#    df -> derivada (acá dg)
-#    x0 -> valor inicial
+#    f  = función (acá g)
+#    df = derivada (acá dg)
+#    x0 = valor inicial
 def newton(f, df, x0, tol=1e-8, max_iter=100):
     
     x = x0  # valor inicial
