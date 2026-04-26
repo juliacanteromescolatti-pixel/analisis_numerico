@@ -4,7 +4,7 @@ Aplicar busqueda ceros a  p(x): x**3+x-5
 con x0=10.0 y x1=-10.0 para 15 iteraciones y tolerancia 1e-6
 """
 
-from func_au import * # importo todo el archivo
+from ej_1_2 import * # importo todo el archivo
 def mi_funcion(x):
     return horn([1, 0, 1, -5], x), horn([3, 0, 1], x)     
 hx_best, hf_best = busqueda_ceros(mi_funcion, 10.0, -10.0, 1e-6, 15)
