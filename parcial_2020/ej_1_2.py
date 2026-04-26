@@ -41,7 +41,7 @@ def rsecante(fun,x0,x1,err,mit):
 
 #criterio maximo numero de iteraciones 
     for _ in range(mit):
-        if abs(f_x0)<abs(fx1):
+        if abs(f_x0)<abs(f_x1):
             x0, x1 = swap(x0,x1)
             f_x0, f_x1 = swap(f_x0, f_x1)
         s = (x1 - x0)/ (f_x1,f_x0)
@@ -72,7 +72,7 @@ Y debe retornar el pto para el cual el valor abs de la funcion es el cero mas ce
 """
 def busqueda_ceros(fun, x0, x1, err, mit):
     hx_newton, hf_newton = rnweton(fun, x0, err, mit)
-    hx_secante, hf_secante = rsecante( lambda x : fun(x)[0], xo, x1, err, mit) #en vez de fun, uso lamda de x tq solo me da el primer elemneto de la fun, pues rsecante solo usa el valor de fun, no de la derivada
+    hx_secante, hf_secante = rsecante( lambda x : fun(x)[0], x0, x1, err, mit) #en vez de fun, uso lamda de x tq solo me da el primer elemneto de la fun, pues rsecante solo usa el valor de fun, no de la derivada
     
     print(f"La aproximacion a la raiz encontrada con el metodo de Newton es {hx_newton[-1]}.") #uso [-1] pues es el ultimo elemneto de la lista
     print(f"El numero de iteraciones realizadas es de {len(hx_newton)}.") #calulo la longitud de la lista para la cant de iteraciones
@@ -86,3 +86,13 @@ def busqueda_ceros(fun, x0, x1, err, mit):
         print(f"La aproximacion mas cercana due dada por el metodo de Newton, y es {hf_newton[-1]}.")
     else:
         print(f"La aproximacion mas cercana due dada por el metodo de la Secante, y es {hf_secante[-1]}.")
+
+
+#Metodo de Horner que usaremso en la actividad 3 y 4
+def horn(coefs, x0):
+    n = len(coefs)
+    b = coefs[0]
+    for i in range(1,n):
+        b = coefs[i] + b * x0
+    
+    return b
