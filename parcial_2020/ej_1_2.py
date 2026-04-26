@@ -44,7 +44,7 @@ def rsecante(fun,x0,x1,err,mit):
         if abs(f_x0)<abs(f_x1):
             x0, x1 = swap(x0,x1)
             f_x0, f_x1 = swap(f_x0, f_x1)
-        s = (x1 - x0)/ (f_x1,f_x0)
+        s = (x1 - x0)/ (f_x1 - f_x0)
         
         x1=x0
         f_x1 = f_x0
@@ -52,7 +52,7 @@ def rsecante(fun,x0,x1,err,mit):
         x0 = x0- f_x0 * s #metodo secante
         f_x0 = fun(x0)
     
-        hx.appemd(x0)
+        hx.append(x0)
         hf.append(f_x0)
     
 #el otro criterio de parada es ver si abs de f(x0) es menor que el error
@@ -84,9 +84,10 @@ def busqueda_ceros(fun, x0, x1, err, mit):
 #COmpara las ultimos elementos de Nweton y de la Secante y veo cual es el mas chico con respecto a abs(f)
     if abs(hx_newton[-1]) < abs(hf_secante[-1]):
         print(f"La aproximacion mas cercana due dada por el metodo de Newton, y es {hf_newton[-1]}.")
+        return hx_newton, hf_newton
     else:
         print(f"La aproximacion mas cercana due dada por el metodo de la Secante, y es {hf_secante[-1]}.")
-
+        return hx_secante, hf_secante
 
 #Metodo de Horner que usaremso en la actividad 3 y 4
 def horn(coefs, x0):

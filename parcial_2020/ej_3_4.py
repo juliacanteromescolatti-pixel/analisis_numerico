@@ -27,7 +27,7 @@ x = [a + i*h for i in range(100)]
 fx = [mi_funcion(i)[0] for i in x]
 plt.xlim([-2, 4]) # determino los limites de mi grafico en x
 plt.ylim([-20, 80]) # determino los limites de mi grafico en y
-plt.plot(x, fx, hx_best, hf,best, "o")
+plt.plot(x, fx, hx_best, hf_best, "o")
 plt.title("mi funcion y el metodo de Newton")
-plt.legend("mi funcion", "iteraciones de Newton")
-plt.show
+plt.legend(["mi funcion", "iteraciones de Newton"])
+plt.show()
