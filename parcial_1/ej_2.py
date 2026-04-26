@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from ej_1 import serie_seno
 
 # Variables iniciales
-segmento = [0, 6.4]
+segmento = [3, 5]
 res = 0.01
 cant_pto = int((segmento[1]-segmento[0])/res)
 print(cant_pto)
@@ -21,5 +21,6 @@ for i in range(cant_pto + 1):
 
 # Graficar
 plt.plot(dom, img)
+plt.grid(True, linestyle='--', color='gray', alpha=0.7)
 plt.show()
 print(dom)
