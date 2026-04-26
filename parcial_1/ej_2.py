@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from ej_1 import serie_seno
 
 # Variables iniciales
-segmento = [3, 5]
+segmento = [0, 6.4]
 res = 0.01
 cant_pto = int((segmento[1]-segmento[0])/res)
 print(cant_pto)
