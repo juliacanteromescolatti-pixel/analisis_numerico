@@ -82,7 +82,7 @@ def busqueda_ceros(fun, x0, x1, err, mit):
 
 #Buscamos el cero mas cercano al valor absluto de la funcion
 #COmpara las ultimos elementos de Nweton y de la Secante y veo cual es el mas chico con respecto a abs(f)
-    if abs(hx_newton[-1]) < abs(hf_secante[-1]):
+    if abs(hf_newton[-1]) < abs(hf_secante[-1]):
         print(f"La aproximacion mas cercana due dada por el metodo de Newton, y es {hf_newton[-1]}.")
         return hx_newton, hf_newton
     else:
