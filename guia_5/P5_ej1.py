@@ -19,10 +19,10 @@ def intecomp(fun, a, b, n, regla:str):
 		x = a
 		for j in range (1, 2*n):
 			x = x + h
-			if j/2 == int:
+			if j%2 == 0:
 				sx2 = sx2 + fun(x)	
 			else:
-			        sx1 = sx1 + fun(x) 
+			        sx1 = sx1 + fun(x)
 		sx = (sx0+2*sx2+4*sx1)*(h/3)
 		return sx
 	elif regla == "trapecio":
@@ -41,7 +41,7 @@ def intecomp(fun, a, b, n, regla:str):
 		x = a + h
 		for j in range (0, n//2):  #ponemos // para referirnos a que n es un numero entero
 			x = x + h
-			if j/2 == int:
+			if j%2 == 0:
 				sx1 = sx1 + fun(x)
 			else:
 			        None 
