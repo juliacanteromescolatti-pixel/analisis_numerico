@@ -44,6 +44,6 @@ def intecomp(fun, a, b, n, regla:str):   #fa y fb: Calcula la altura de la funci
 			if j%2 == 0:
 				sx1 = sx1 + fun(x)
 			else:
-			    None 
+				None 
 		sx = sx1*2*h
 		return sx
