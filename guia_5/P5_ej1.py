@@ -8,7 +8,7 @@ def fun2(x):
 	y = x**3
 	return y
 	
-def intecomp(fun, a, b, n, regla:str):
+def intecomp(fun, a, b, n, regla:str):   #fa y fb: Calcula la altura de la función en los dos extremos absolutos del intervalo (a y b).
 	fa=fun(a)
 	fb=fun(b)
 	if regla == "simpson":
@@ -17,13 +17,13 @@ def intecomp(fun, a, b, n, regla:str):
 		sx1 = 0 # suma de terminos impares
 		sx2 = 0 # suma de terminos pares
 		x = a
-		for j in range (1, 2*n):
+		for j in range (1, 2*n): #suma terminos pares
 			x = x + h
 			if j%2 == 0:
 				sx2 = sx2 + fun(x)	
-			else:
-			        sx1 = sx1 + fun(x)
-		sx = (sx0+2*sx2+4*sx1)*(h/3)
+			else:   #suma terminos imapres
+				sx1 = sx1 + fun(x)
+			sx = (sx0+2*sx2+4*sx1)*(h/3) #aplica regla de simpson
 		return sx
 	elif regla == "trapecio":
 		h = (b-a)/n
@@ -44,6 +44,6 @@ def intecomp(fun, a, b, n, regla:str):
 			if j%2 == 0:
 				sx1 = sx1 + fun(x)
 			else:
-			        None 
+			    None 
 		sx = sx1*2*h
 		return sx
